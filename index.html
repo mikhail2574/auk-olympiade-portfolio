@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name: projects, skills, and contact." />
+  <meta property="og:title" content="Your Name — Portfolio" />
+  <meta property="og:description" content="Projects, skills, and contact." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top">
+      <img src="assets/logo.svg" alt="" width="28" height="28" />
+      <span>Your Name</span>
+    </a>
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+            <span class="sun" aria-hidden="true">☀</span><span class="moon" aria-hidden="true">🌙</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner container">
+        <div class="hero-copy">
+          <p class="eyebrow">Hello, I'm</p>
+          <h1>Your Name</h1>
+          <p class="lead">
+            I build <strong>fast, delightful</strong> web apps and data-driven tools.
+            Frontend-focused with a taste for UX, and enough backend to ship ideas end‑to‑end.
+          </p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+          </div>
+          <div class="socials">
+            <!-- Replace with your links -->
+            <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:hello@example.com">Email</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <!-- Simple decorative graphic -->
+          <svg viewBox="0 0 400 400" role="img" aria-label="decorative-art">
+            <defs>
+              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="var(--accent-600)"/>
+                <stop offset="1" stop-color="var(--accent-400)"/>
+              </linearGradient>
+            </defs>
+            <circle cx="200" cy="200" r="140" fill="url(#g)" opacity="0.18"/>
+            <rect x="90" y="90" width="220" height="220" rx="28" fill="url(#g)" opacity="0.25"/>
+            <path d="M60 300 C140 240, 260 340, 340 280" fill="none" stroke="url(#g)" stroke-width="10" opacity="0.7"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <div class="section-head">
+        <h2>About me</h2>
+        <p>Short story, long impact.</p>
+      </div>
+      <div class="about-grid">
+        <p>
+          I'm a product‑minded engineer who enjoys turning fuzzy ideas into polished experiences.
+          I value clear writing, tight feedback loops, and accessible, inclusive UI.
+        </p>
+        <ul class="bullets">
+          <li>💡 Strong in React / TypeScript / Node</li>
+          <li>⚙️ Practical with Python (data/automation)</li>
+          <li>🧭 UX‑first mindset, design systems</li>
+          <li>🚀 Ship early, iterate with users</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <div class="section-head">
+        <h2>Selected projects</h2>
+        <p>Real work, real users. A small taste below.</p>
+      </div>
+
+      <div id="project-grid" class="project-grid">
+        <!-- Cards injected from script.js / data below -->
+      </div>
+
+      <!-- Inline JSON data for simplicity; edit or add projects -->
+      <script id="project-data" type="application/json">
+      [
+        {
+          "title": "Realtime Dashboard",
+          "desc": "Websocket-powered live metrics and alerts for IoT devices.",
+          "stack": ["React", "TypeScript", "WebSocket"],
+          "links": [
+            {"label": "Demo", "href": "#"},
+            {"label": "Code", "href": "https://github.com/yourname/demo"}
+          ]
+        },
+        {
+          "title": "Design System",
+          "desc": "Composable component library with tokens, docs, and theming.",
+          "stack": ["Storybook", "CSS Vars", "TS"],
+          "links": [
+            {"label": "Docs", "href": "#"},
+            {"label": "Code", "href": "https://github.com/yourname/design-system"}
+          ]
+        },
+        {
+          "title": "Data Notebook",
+          "desc": "Fast CSV explorer with column stats and charting.",
+          "stack": ["Python", "D3", "WebAssembly"],
+          "links": [
+            {"label": "Demo", "href": "#"},
+            {"label": "Code", "href": "https://github.com/yourname/data-notebook"}
+          ]
+        }
+      ]
+      </script>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section container">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p>Things I use to solve problems.</p>
+      </div>
+      <div class="tag-cloud" aria-label="skills">
+        <span class="tag">React</span>
+        <span class="tag">Next.js</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Python</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Docker</span>
+        <span class="tag">AWS</span>
+        <span class="tag">UI/UX</span>
+        <span class="tag">Testing</span>
+        <span class="tag">CI/CD</span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Have an idea? Let's talk.</p>
+      </div>
+      <div class="contact-card">
+        <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+        <p>Also on <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a> &amp; <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Your Name</strong><br/>
+        <small>© <span id="y"></span> All rights reserved.</small>
+      </div>
+      <nav class="footer-nav">
+        <a href="#top">Top ↑</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
